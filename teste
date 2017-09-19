@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sem título</title>
+</head>
+
+<body>
+<style>
+	.main{
+	display:grid;
+	grid-template-areas:"header login" "formulario formulario" "footer footer";
+	grid-template-rows:50%;
+	font-family: 'Roboto';
+}
+.header{grid-area:header;background-color:#0C9;}
+.login{grid-area:login;background-color:#936;}
+.form{grid-area:formulario;grid-template-columns:background-color:#06C;}
+.footer{grid-area:footer;background-color:#FCF;
+}
+/*=================================== MOBILE FIRST ===============================*/
+@media screen and (max-width: 480px){
+.main{
+	grid-template-areas:"header" "login" "formulario""footer";}
+.header{width:100%;display:flex;flex-direction:column;flex-wrap:no-wrap;}
+
+.formulario{width:100%;height:70%;display:flex;flex-direction:column;flex-wrap:no-wrap;}
+.grid_footer{}}
+/*==================== menu ===================================*/
+.logo{
+	height: 70px;
+	width: 200px;
+	float: left;
+}
+nav{
+	display:inline;
+	float:left;
+	color:white;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 21px;
+}
+.item:hover{
+	display: block;
+	background-color: #ff0080;
+	padding-top: 25px;
+	padding-left: 20px;
+}
+a{
+	padding: 0px 10px;
+	display: inline;
+	
+	color:white;
+	text-decoration: none;
+}
+.form{
+	display:flex;
+	justify-content:center;
+}
+</style>
+
+
+
+<section class="main">
+<div class="header">
+	<img class="logo" src="img/logo-novo.png"/>
+        <nav class="item"><a href="index.html">A Impacta</a></nav>  
+        <nav class="item"><a href="graduacao.html">Cursos</a></nav>
+        <nav class="item"><a href="#">Eventos</a></nav>
+        <nav class="item"><a href="noticias.html">Noticías</a></nav>
+        <nav class="item"><a href="#">Blog</a></nav>
+        <nav class="item"><a href="#">Contatos</a></nav>
+
+</div>
+<div class="login"><nav class="item"><a href="#">Login</a></nav></div>
+<div class="form">
+<form action="recuperarSenha" method="post">
+    <span class="titulo">Recuperar de senha</span><br><br/>
+    	<label for"email"> Email</label><br/>
+        <input type="text" name="email" id="email" size="20"/><br/>
+        <label for="ra_aluno"> RA: </label><br/>
+        <input type="text" name="ra_aluno" id="ra_aluno"/><br/>
+        <label for="nova_senha"> Nova senha: </label><br/>
+        <input type="password" name="nova_senha" id="nova_senha"><br/>
+        <label for="confirmacao_senha"/> confirmação da nova senha </label><br/>
+        <input type="password" name="confirmacao_senha" id="confirmacao_senha"/><br/>
+       <button type="submit">Enviar</button>
+</form>
+</div>
+
+</div>
+<div class="footer">aqui vai o footer</div>
+</section>
+
+
+
+</section>
+</body>
+</html>
